@@ -1,0 +1,7 @@
+
+State Machine - |UART_Receiver|UART_Receiver_logic:UART_Receiver_logic_inst|state_reg
+Name state_reg.stop state_reg.busy state_reg.start state_reg.idle 
+state_reg.idle 0 0 0 0 
+state_reg.start 0 0 1 1 
+state_reg.busy 0 1 0 1 
+state_reg.stop 1 0 0 1 

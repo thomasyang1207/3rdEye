@@ -1,0 +1,16 @@
+|shift_register
+data_in[0] => ~NO_FANOUT~
+data_in[1] => ~NO_FANOUT~
+data_in[2] => ~NO_FANOUT~
+data_in[3] => ~NO_FANOUT~
+data_in[4] => ~NO_FANOUT~
+data_in[5] => ~NO_FANOUT~
+data_in[6] => ~NO_FANOUT~
+data_in[7] => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+rd => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+done <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
