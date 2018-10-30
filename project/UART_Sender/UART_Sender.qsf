@@ -47,7 +47,17 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name VHDL_FILE ../src/UART_Sender/UART_Sender.vhd
 set_global_assignment -name VHDL_FILE ../../src/UART_Sender/UART_Sender.vhd
 set_global_assignment -name VHDL_FILE ../../src/UART_Sender/UART_Sender_logic.vhd
 set_global_assignment -name VHDL_FILE ../../src/UART_Sender/Baud_rate_generator.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_M23 -to rst
+set_location_assignment PIN_AB22 -to tx
+set_location_assignment PIN_G19 -to tx_ready
+set_location_assignment PIN_M21 -to tx_start
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

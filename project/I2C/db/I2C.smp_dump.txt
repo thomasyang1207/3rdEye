@@ -1,0 +1,14 @@
+
+State Machine - |I2C|state_reg
+Name state_reg.stop state_reg.wr2_ack state_reg.wr1_ack state_reg.rd_ack state_reg.rd state_reg.wr2 state_reg.wr1 state_reg.addr_ack state_reg.addr state_reg.start state_reg.idle 
+state_reg.idle 0 0 0 0 0 0 0 0 0 0 0 
+state_reg.start 0 0 0 0 0 0 0 0 0 1 1 
+state_reg.addr 0 0 0 0 0 0 0 0 1 0 1 
+state_reg.addr_ack 0 0 0 0 0 0 0 1 0 0 1 
+state_reg.wr1 0 0 0 0 0 0 1 0 0 0 1 
+state_reg.wr2 0 0 0 0 0 1 0 0 0 0 1 
+state_reg.rd 0 0 0 0 1 0 0 0 0 0 1 
+state_reg.rd_ack 0 0 0 1 0 0 0 0 0 0 1 
+state_reg.wr1_ack 0 0 1 0 0 0 0 0 0 0 1 
+state_reg.wr2_ack 0 1 0 0 0 0 0 0 0 0 1 
+state_reg.stop 1 0 0 0 0 0 0 0 0 0 1 

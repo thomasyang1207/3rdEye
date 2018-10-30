@@ -1,0 +1,13 @@
+
+State Machine - |UART_Sender|state_reg
+Name state_reg.pulse_down state_reg.pulse_up state_reg.idle 
+state_reg.idle 0 0 0 
+state_reg.pulse_up 0 1 1 
+state_reg.pulse_down 1 0 1 
+
+State Machine - |UART_Sender|UART_Sender_logic:uart_inst|state_reg
+Name state_reg.stop state_reg.data state_reg.start state_reg.idle 
+state_reg.idle 0 0 0 0 
+state_reg.start 0 0 1 1 
+state_reg.data 0 1 0 1 
+state_reg.stop 1 0 0 1 

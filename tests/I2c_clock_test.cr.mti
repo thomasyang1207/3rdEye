@@ -1,0 +1,22 @@
+C:/3rdEye/3rdEye/tests/I2C_Clock_Test/I2C_Clk_test.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/3rdEye/3rdEye/tests/I2C_Clock_Test/I2C_Clk_test.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity I2C_Clk_test
+-- Compiling architecture tb of I2C_Clk_test
+-- Loading entity I2C_Clk_gen
+** Error (suppressible): C:/3rdEye/3rdEye/tests/I2C_Clock_Test/I2C_Clk_test.vhd(13): (vcom-1141) Identifier "I2C_Clk_gen" does not identify a component declaration.
+** Error: C:/3rdEye/3rdEye/tests/I2C_Clock_Test/I2C_Clk_test.vhd(27): VHDL Compiler exiting
+
+} {11.0 12.0} {}} C:/3rdEye/3rdEye/src/I2C/I2C_Clk_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/3rdEye/3rdEye/src/I2C/I2C_Clk_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity I2C_Clk_gen
+-- Compiling architecture arch of I2C_Clk_gen
+
+} {} {}}

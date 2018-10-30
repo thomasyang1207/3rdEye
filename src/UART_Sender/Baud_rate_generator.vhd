@@ -43,7 +43,7 @@ begin
 		s_tick_next <= '0';
 		if(count_reg = to_unsigned(limit, 5)) then
 			count_next <= "00000";
-		elsif(count_reg = to_unsigned(limit-1, 5))
+		elsif(count_reg = to_unsigned(limit-1, 5)) then
 			s_tick_next <= '1';
 		end if;
 	end process;
