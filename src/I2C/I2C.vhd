@@ -21,7 +21,7 @@ entity I2C is
 		
 		data_rd : out STD_LOGIC_VECTOR(7 downto 0); --data read from slave
 		
-		output_valid : out std_logic; --single pulse indicating that the data_rd is valid
+		done_transmit : out std_logic; --single pulse indicating that the data_rd is valid
 		ready: out std_logic; --signal indicating that the device is ready. 
 		ack_error : out std_logic; --flag if improper acknowledge from slave; i.e. if slave was reset, etc.
 		
@@ -129,7 +129,7 @@ begin
 		doneRead_next <= doneRead_reg;
 		noAck_next <= noAck_reg;
 		ack_error <= '0';
-		output_valid <= '0'; 
+		done_transmit <= '0'; 
 		ready <= '0';
 		case state_reg is
 ---------------------------------------------------------------------------------
@@ -137,7 +137,6 @@ begin
 				ready <= '1';
 				s_enable <= '0';
 				if ena = '1' then --the addr, data, and 
-					ready <= '0';
 					state_next <= start;
 					addr_next <= slave_addr & rw;
 					tick_next <= 0; 
@@ -320,7 +319,6 @@ begin
 						if sda /= '0' then
 							noAck_next <= '1';
 						else
-							output_valid <= '1';
 							--prepare the data
 							data_next <= data_wr; --register address; 
 						end if;
@@ -387,6 +385,7 @@ begin
 						when 1 =>
 							sda_next <= '1';
 							scl_next <= '1';
+							done_transmit <= '1'; 
 							state_next <= idle;
 							--clear all registers... 
 							addr_next <= "00000000";

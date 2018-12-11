@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 09 18:37:03 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : UART_readline
+Top-level Entity Name : UART_readline
+Family : Cyclone IV E
+Total logic elements : 3,875
+    Total combinational functions : 1,819
+    Dedicated logic registers : 2,111
+Total registers : 2111
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

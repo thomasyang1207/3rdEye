@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 11 16:14:23 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Camera_Init
+Top-level Entity Name : Camera_Init
+Family : Cyclone IV E
+Total logic elements : 701
+    Total combinational functions : 699
+    Dedicated logic registers : 156
+Total registers : 156
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

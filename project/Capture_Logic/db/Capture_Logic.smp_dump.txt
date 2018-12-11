@@ -1,0 +1,8 @@
+
+State Machine - |Capture_Logic|state_reg
+Name state_reg.done state_reg.ffd9 state_reg.capture state_reg.wait1 state_reg.idle 
+state_reg.idle 0 0 0 0 0 
+state_reg.wait1 0 0 0 1 1 
+state_reg.capture 0 0 1 0 1 
+state_reg.ffd9 0 1 0 0 1 
+state_reg.done 1 0 0 0 1 

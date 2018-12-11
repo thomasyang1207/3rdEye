@@ -1,0 +1,21 @@
+
+State Machine - |UART_readline|Command_interpreter:Command_interpreter_inst|parse_state_reg
+Name parse_state_reg.other_command parse_state_reg.no_clients parse_state_reg.complete parse_state_reg.start_transfer parse_state_reg.unknown 
+parse_state_reg.unknown 0 0 0 0 0 
+parse_state_reg.start_transfer 0 0 0 1 1 
+parse_state_reg.complete 0 0 1 0 1 
+parse_state_reg.no_clients 0 1 0 0 1 
+parse_state_reg.other_command 1 0 0 0 1 
+
+State Machine - |UART_readline|Command_interpreter:Command_interpreter_inst|state_reg
+Name state_reg.done state_reg.parsing state_reg.idle 
+state_reg.idle 0 0 0 
+state_reg.parsing 0 1 1 
+state_reg.done 1 0 1 
+
+State Machine - |UART_readline|UART_Receiver:UART_Receiver_inst|UART_Receiver_logic:UART_Receiver_logic_inst|state_reg
+Name state_reg.stop state_reg.busy state_reg.start state_reg.idle 
+state_reg.idle 0 0 0 0 
+state_reg.start 0 0 1 1 
+state_reg.busy 0 1 0 1 
+state_reg.stop 1 0 0 1 

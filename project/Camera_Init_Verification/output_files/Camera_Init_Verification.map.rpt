@@ -1,0 +1,450 @@
+Analysis & Synthesis report for Camera_Init_Verification
+Tue Dec 11 17:04:37 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Camera_Init_Verification|state_reg
+  9. State Machine - |Camera_Init_Verification|Camera_Init:Camera_inst|state_reg
+ 10. State Machine - |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|state_reg
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Camera_Init:Camera_inst|I2C:I2c_inst
+ 16. Parameter Settings for User Entity Instance: Camera_Init:Camera_inst|I2C:I2c_inst|I2C_Clk_gen:I2C_Clk_gen_inst
+ 17. Port Connectivity Checks: "Camera_Init:Camera_inst|I2C:I2c_inst"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Dec 11 17:04:37 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Camera_Init_Verification                    ;
+; Top-level Entity Name              ; Camera_Init_Verification                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 701                                         ;
+;     Total combinational functions  ; 698                                         ;
+;     Dedicated logic registers      ; 157                                         ;
+; Total registers                    ; 157                                         ;
+; Total pins                         ; 4                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                    ;
++----------------------------------------------------------------------------+--------------------------+--------------------------+
+; Option                                                                     ; Setting                  ; Default Value            ;
++----------------------------------------------------------------------------+--------------------------+--------------------------+
+; Device                                                                     ; EP4CE115F29C7            ;                          ;
+; Top-level entity name                                                      ; Camera_Init_Verification ; Camera_Init_Verification ;
+; Family name                                                                ; Cyclone IV E             ; Cyclone V                ;
+; Use smart compilation                                                      ; Off                      ; Off                      ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                       ; On                       ;
+; Enable compact report table                                                ; Off                      ; Off                      ;
+; Restructure Multiplexers                                                   ; Auto                     ; Auto                     ;
+; Create Debugging Nodes for IP Cores                                        ; Off                      ; Off                      ;
+; Preserve fewer node names                                                  ; On                       ; On                       ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable                   ; Enable                   ;
+; Verilog Version                                                            ; Verilog_2001             ; Verilog_2001             ;
+; VHDL Version                                                               ; VHDL_1993                ; VHDL_1993                ;
+; State Machine Processing                                                   ; Auto                     ; Auto                     ;
+; Safe State Machine                                                         ; Off                      ; Off                      ;
+; Extract Verilog State Machines                                             ; On                       ; On                       ;
+; Extract VHDL State Machines                                                ; On                       ; On                       ;
+; Ignore Verilog initial constructs                                          ; Off                      ; Off                      ;
+; Iteration limit for constant Verilog loops                                 ; 5000                     ; 5000                     ;
+; Iteration limit for non-constant Verilog loops                             ; 250                      ; 250                      ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                       ; On                       ;
+; Infer RAMs from Raw Logic                                                  ; On                       ; On                       ;
+; Parallel Synthesis                                                         ; On                       ; On                       ;
+; DSP Block Balancing                                                        ; Auto                     ; Auto                     ;
+; NOT Gate Push-Back                                                         ; On                       ; On                       ;
+; Power-Up Don't Care                                                        ; On                       ; On                       ;
+; Remove Redundant Logic Cells                                               ; Off                      ; Off                      ;
+; Remove Duplicate Registers                                                 ; On                       ; On                       ;
+; Ignore CARRY Buffers                                                       ; Off                      ; Off                      ;
+; Ignore CASCADE Buffers                                                     ; Off                      ; Off                      ;
+; Ignore GLOBAL Buffers                                                      ; Off                      ; Off                      ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                      ; Off                      ;
+; Ignore LCELL Buffers                                                       ; Off                      ; Off                      ;
+; Ignore SOFT Buffers                                                        ; On                       ; On                       ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                      ; Off                      ;
+; Optimization Technique                                                     ; Balanced                 ; Balanced                 ;
+; Carry Chain Length                                                         ; 70                       ; 70                       ;
+; Auto Carry Chains                                                          ; On                       ; On                       ;
+; Auto Open-Drain Pins                                                       ; On                       ; On                       ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                      ; Off                      ;
+; Auto ROM Replacement                                                       ; On                       ; On                       ;
+; Auto RAM Replacement                                                       ; On                       ; On                       ;
+; Auto DSP Block Replacement                                                 ; On                       ; On                       ;
+; Auto Shift Register Replacement                                            ; Auto                     ; Auto                     ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                     ; Auto                     ;
+; Auto Clock Enable Replacement                                              ; On                       ; On                       ;
+; Strict RAM Replacement                                                     ; Off                      ; Off                      ;
+; Allow Synchronous Control Signals                                          ; On                       ; On                       ;
+; Force Use of Synchronous Clear Signals                                     ; Off                      ; Off                      ;
+; Auto RAM Block Balancing                                                   ; On                       ; On                       ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                      ; Off                      ;
+; Auto Resource Sharing                                                      ; Off                      ; Off                      ;
+; Allow Any RAM Size For Recognition                                         ; Off                      ; Off                      ;
+; Allow Any ROM Size For Recognition                                         ; Off                      ; Off                      ;
+; Allow Any Shift Register Size For Recognition                              ; Off                      ; Off                      ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                       ; On                       ;
+; Ignore translate_off and synthesis_off directives                          ; Off                      ; Off                      ;
+; Timing-Driven Synthesis                                                    ; On                       ; On                       ;
+; Report Parameter Settings                                                  ; On                       ; On                       ;
+; Report Source Assignments                                                  ; On                       ; On                       ;
+; Report Connectivity Checks                                                 ; On                       ; On                       ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                      ; Off                      ;
+; Synchronization Register Chain Length                                      ; 2                        ; 2                        ;
+; Power Optimization During Synthesis                                        ; Normal compilation       ; Normal compilation       ;
+; HDL message level                                                          ; Level2                   ; Level2                   ;
+; Suppress Register Optimization Related Messages                            ; Off                      ; Off                      ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                     ; 5000                     ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                     ; 5000                     ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                      ; 100                      ;
+; Clock MUX Protection                                                       ; On                       ; On                       ;
+; Auto Gated Clock Conversion                                                ; Off                      ; Off                      ;
+; Block Design Naming                                                        ; Auto                     ; Auto                     ;
+; SDC constraint protection                                                  ; Off                      ; Off                      ;
+; Synthesis Effort                                                           ; Auto                     ; Auto                     ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                       ; On                       ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                      ; Off                      ;
+; Analysis & Synthesis Message Level                                         ; Medium                   ; Medium                   ;
+; Disable Register Merging Across Hierarchies                                ; Auto                     ; Auto                     ;
+; Resource Aware Inference For Block RAM                                     ; On                       ; On                       ;
++----------------------------------------------------------------------------+--------------------------+--------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++-----------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++-----------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; ../../src/Camera_Init_Verification/Camera_Init_Verification.vhd ; yes             ; User VHDL File  ; C:/3rdEye/3rdEye/src/Camera_Init_Verification/Camera_Init_Verification.vhd ;         ;
+; ../../src/Camera_Init/Camera_Init.vhd                           ; yes             ; User VHDL File  ; C:/3rdEye/3rdEye/src/Camera_Init/Camera_Init.vhd                           ;         ;
+; ../../src/I2C/I2C_Clk_gen.vhd                                   ; yes             ; User VHDL File  ; C:/3rdEye/3rdEye/src/I2C/I2C_Clk_gen.vhd                                   ;         ;
+; ../../src/I2C/I2C.vhd                                           ; yes             ; User VHDL File  ; C:/3rdEye/3rdEye/src/I2C/I2C.vhd                                           ;         ;
++-----------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimated Total logic elements              ; 701                                ;
+;                                             ;                                    ;
+; Total combinational functions               ; 698                                ;
+; Logic element usage by number of LUT inputs ;                                    ;
+;     -- 4 input functions                    ; 473                                ;
+;     -- 3 input functions                    ; 56                                 ;
+;     -- <=2 input functions                  ; 169                                ;
+;                                             ;                                    ;
+; Logic elements by mode                      ;                                    ;
+;     -- normal mode                          ; 574                                ;
+;     -- arithmetic mode                      ; 124                                ;
+;                                             ;                                    ;
+; Total registers                             ; 157                                ;
+;     -- Dedicated logic registers            ; 157                                ;
+;     -- I/O registers                        ; 0                                  ;
+;                                             ;                                    ;
+; I/O pins                                    ; 4                                  ;
+;                                             ;                                    ;
+; Embedded Multiplier 9-bit elements          ; 0                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; Camera_Init:Camera_inst|ind_reg[3] ;
+; Maximum fan-out                             ; 170                                ;
+; Total fan-out                               ; 3039                               ;
+; Average fan-out                             ; 3.51                               ;
++---------------------------------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name              ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |Camera_Init_Verification               ; 698 (0)             ; 157 (1)                   ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |Camera_Init_Verification                                                                   ; Camera_Init_Verification ; work         ;
+;    |Camera_Init:Camera_inst|            ; 698 (128)           ; 156 (35)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Camera_Init_Verification|Camera_Init:Camera_inst                                           ; Camera_Init              ; work         ;
+;       |I2C:I2c_inst|                    ; 570 (521)           ; 121 (89)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst                              ; I2C                      ; work         ;
+;          |I2C_Clk_gen:I2C_Clk_gen_inst| ; 49 (49)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|I2C_Clk_gen:I2C_Clk_gen_inst ; I2C_Clk_gen              ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------+
+; State Machine - |Camera_Init_Verification|state_reg                       ;
++--------------------+--------------------+----------------+----------------+
+; Name               ; state_reg.complete ; state_reg.send ; state_reg.idle ;
++--------------------+--------------------+----------------+----------------+
+; state_reg.idle     ; 0                  ; 0              ; 0              ;
+; state_reg.send     ; 0                  ; 1              ; 1              ;
+; state_reg.complete ; 1                  ; 0              ; 1              ;
++--------------------+--------------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Camera_Init_Verification|Camera_Init:Camera_inst|state_reg ;
++-------------------+----------------+-------------------+--------------------+
+; Name              ; state_reg.stop ; state_reg.sending ; state_reg.idle     ;
++-------------------+----------------+-------------------+--------------------+
+; state_reg.idle    ; 0              ; 0                 ; 0                  ;
+; state_reg.sending ; 0              ; 1                 ; 1                  ;
+; state_reg.stop    ; 1              ; 0                 ; 1                  ;
++-------------------+----------------+-------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|state_reg                                                                                                                               ;
++--------------------+----------------+-------------------+-------------------+------------------+--------------+---------------+---------------+--------------------+----------------+-----------------+----------------+
+; Name               ; state_reg.stop ; state_reg.wr2_ack ; state_reg.wr1_ack ; state_reg.rd_ack ; state_reg.rd ; state_reg.wr2 ; state_reg.wr1 ; state_reg.addr_ack ; state_reg.addr ; state_reg.start ; state_reg.idle ;
++--------------------+----------------+-------------------+-------------------+------------------+--------------+---------------+---------------+--------------------+----------------+-----------------+----------------+
+; state_reg.idle     ; 0              ; 0                 ; 0                 ; 0                ; 0            ; 0             ; 0             ; 0                  ; 0              ; 0               ; 0              ;
+; state_reg.start    ; 0              ; 0                 ; 0                 ; 0                ; 0            ; 0             ; 0             ; 0                  ; 0              ; 1               ; 1              ;
+; state_reg.addr     ; 0              ; 0                 ; 0                 ; 0                ; 0            ; 0             ; 0             ; 0                  ; 1              ; 0               ; 1              ;
+; state_reg.addr_ack ; 0              ; 0                 ; 0                 ; 0                ; 0            ; 0             ; 0             ; 1                  ; 0              ; 0               ; 1              ;
+; state_reg.wr1      ; 0              ; 0                 ; 0                 ; 0                ; 0            ; 0             ; 1             ; 0                  ; 0              ; 0               ; 1              ;
+; state_reg.wr2      ; 0              ; 0                 ; 0                 ; 0                ; 0            ; 1             ; 0             ; 0                  ; 0              ; 0               ; 1              ;
+; state_reg.rd       ; 0              ; 0                 ; 0                 ; 0                ; 1            ; 0             ; 0             ; 0                  ; 0              ; 0               ; 1              ;
+; state_reg.rd_ack   ; 0              ; 0                 ; 0                 ; 1                ; 0            ; 0             ; 0             ; 0                  ; 0              ; 0               ; 1              ;
+; state_reg.wr1_ack  ; 0              ; 0                 ; 1                 ; 0                ; 0            ; 0             ; 0             ; 0                  ; 0              ; 0               ; 1              ;
+; state_reg.wr2_ack  ; 0              ; 1                 ; 0                 ; 0                ; 0            ; 0             ; 0             ; 0                  ; 0              ; 0               ; 1              ;
+; state_reg.stop     ; 1              ; 0                 ; 0                 ; 0                ; 0            ; 0             ; 0             ; 0                  ; 0              ; 0               ; 1              ;
++--------------------+----------------+-------------------+-------------------+------------------+--------------+---------------+---------------+--------------------+----------------+-----------------+----------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[0..4]   ; Stuck at GND due to stuck port data_in ;
+; state_reg.send                                        ; Lost fanout                            ;
+; state_reg.complete                                    ; Lost fanout                            ;
+; Camera_Init:Camera_inst|I2C:I2c_inst|state_reg.rd     ; Stuck at GND due to stuck port data_in ;
+; Camera_Init:Camera_inst|I2C:I2c_inst|state_reg.rd_ack ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 9                 ;                                        ;
++-------------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                      ;
++--------------------------------------------------+---------------------------+---------------------------------------------------+
+; Register name                                    ; Reason for Removal        ; Registers Removed due to This Register            ;
++--------------------------------------------------+---------------------------+---------------------------------------------------+
+; Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[0] ; Stuck at GND              ; Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[1], ;
+;                                                  ; due to stuck port data_in ; Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[2], ;
+;                                                  ;                           ; Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[3], ;
+;                                                  ;                           ; Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[4]  ;
++--------------------------------------------------+---------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 157   ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 155   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 106   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |Camera_Init_Verification|Camera_Init:Camera_inst|ind_reg[18]                    ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|addr_reg[1]       ;
+; 13:1               ; 32 bits   ; 256 LEs       ; 32 LEs               ; 224 LEs                ; Yes        ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|bit_count_reg[11] ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|tick_reg[0]       ;
+; 19:1               ; 30 bits   ; 360 LEs       ; 30 LEs               ; 330 LEs                ; Yes        ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|tick_reg[4]       ;
+; 505:1              ; 7 bits    ; 2352 LEs      ; 1988 LEs             ; 364 LEs                ; Yes        ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|data_reg[3]       ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 20 LEs               ; 25 LEs                 ; No         ; |Camera_Init_Verification|Camera_Init:Camera_inst|I2C:I2c_inst|Selector38        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Camera_Init:Camera_inst|I2C:I2c_inst ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; address_Width  ; 7     ; Signed Integer                                           ;
+; data_width     ; 7     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Camera_Init:Camera_inst|I2C:I2c_inst|I2C_Clk_gen:I2C_Clk_gen_inst ;
++----------------+----------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                               ;
++----------------+----------+------------------------------------------------------------------------------------+
+; clk_freq       ; 50000000 ; Signed Integer                                                                     ;
+; i2c_freq       ; 100000   ; Signed Integer                                                                     ;
+; division       ; 4        ; Signed Integer                                                                     ;
++----------------+----------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Camera_Init:Camera_inst|I2C:I2c_inst"                                                           ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rw               ; Input  ; Info     ; Stuck at GND                                                                        ;
+; write_one        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; slave_addr[5..4] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; slave_addr[3..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; slave_addr[6]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_rd          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 157                         ;
+;     CLR               ; 49                          ;
+;     ENA CLR           ; 42                          ;
+;     ENA CLR SCLR      ; 64                          ;
+;     plain             ; 2                           ;
+; cycloneiii_io_obuf    ; 2                           ;
+; cycloneiii_lcell_comb ; 698                         ;
+;     arith             ; 124                         ;
+;         2 data inputs ; 124                         ;
+;     normal            ; 574                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 473                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.30                       ;
+; Average LUT depth     ; 5.97                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Dec 11 17:04:17 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Camera_Init_Verification -c Camera_Init_Verification
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /3rdeye/3rdeye/src/camera_init_verification/camera_init_verification.vhd
+    Info (12022): Found design unit 1: Camera_Init_Verification-arch File: C:/3rdEye/3rdEye/src/Camera_Init_Verification/Camera_Init_Verification.vhd Line: 15
+    Info (12023): Found entity 1: Camera_Init_Verification File: C:/3rdEye/3rdEye/src/Camera_Init_Verification/Camera_Init_Verification.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /3rdeye/3rdeye/src/camera_init/camera_init.vhd
+    Info (12022): Found design unit 1: Camera_Init-arch File: C:/3rdEye/3rdEye/src/Camera_Init/Camera_Init.vhd Line: 16
+    Info (12023): Found entity 1: Camera_Init File: C:/3rdEye/3rdEye/src/Camera_Init/Camera_Init.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /3rdeye/3rdeye/src/i2c/i2c_clk_gen.vhd
+    Info (12022): Found design unit 1: I2C_Clk_gen-arch File: C:/3rdEye/3rdEye/src/I2C/I2C_Clk_gen.vhd Line: 19
+    Info (12023): Found entity 1: I2C_Clk_gen File: C:/3rdEye/3rdEye/src/I2C/I2C_Clk_gen.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /3rdeye/3rdeye/src/i2c/i2c.vhd
+    Info (12022): Found design unit 1: I2C-arch File: C:/3rdEye/3rdEye/src/I2C/I2C.vhd Line: 34
+    Info (12023): Found entity 1: I2C File: C:/3rdEye/3rdEye/src/I2C/I2C.vhd Line: 5
+Info (12127): Elaborating entity "Camera_Init_Verification" for the top level hierarchy
+Info (12128): Elaborating entity "Camera_Init" for hierarchy "Camera_Init:Camera_inst" File: C:/3rdEye/3rdEye/src/Camera_Init_Verification/Camera_Init_Verification.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at Camera_Init.vhd(294): object "data_rd" assigned a value but never read File: C:/3rdEye/3rdEye/src/Camera_Init/Camera_Init.vhd Line: 294
+Info (12128): Elaborating entity "I2C" for hierarchy "Camera_Init:Camera_inst|I2C:I2c_inst" File: C:/3rdEye/3rdEye/src/Camera_Init/Camera_Init.vhd Line: 324
+Info (12128): Elaborating entity "I2C_Clk_gen" for hierarchy "Camera_Init:Camera_inst|I2C:I2c_inst|I2C_Clk_gen:I2C_Clk_gen_inst" File: C:/3rdEye/3rdEye/src/I2C/I2C.vhd Line: 86
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "Camera_Init:Camera_inst|I2C:I2c_inst|sda_next" feeding internal logic into a wire File: C:/3rdEye/3rdEye/src/I2C/I2C.vhd Line: 50
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "Camera_Init:Camera_inst|I2C:I2c_inst|sda_reg" to the node "Camera_Init:Camera_inst|I2C:I2c_inst|sda_next" into an OR gate File: C:/3rdEye/3rdEye/src/I2C/I2C.vhd Line: 48
+    Warning (13047): Converted the fan-out from the tri-state buffer "Camera_Init:Camera_inst|I2C:I2c_inst|scl_reg" to the node "Camera_Init:Camera_inst|I2C:I2c_inst|Selector89" into an OR gate File: C:/3rdEye/3rdEye/src/I2C/I2C.vhd Line: 49
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 705 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 701 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Tue Dec 11 17:04:37 2018
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:38
+
+

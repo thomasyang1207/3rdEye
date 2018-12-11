@@ -1,0 +1,1239 @@
+TimeQuest Timing Analyzer report for Command_interpreter
+Sun Dec 09 15:33:05 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; Command_interpreter                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.4%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 144.82 MHz ; 144.82 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -5.905 ; -46.594            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.403 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -26.130                          ;
++-------+--------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                             ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.905 ; state_reg.parsing              ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.314      ; 7.217      ;
+; -5.903 ; state_reg.parsing              ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.314      ; 7.215      ;
+; -5.854 ; state_reg.parsing              ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.347      ; 7.199      ;
+; -5.817 ; state_reg.parsing              ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.347      ; 7.162      ;
+; -5.809 ; cur_byte_reg[2]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.315      ; 7.122      ;
+; -5.807 ; cur_byte_reg[2]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.315      ; 7.120      ;
+; -5.793 ; cur_byte_reg[4]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.313      ; 7.104      ;
+; -5.791 ; cur_byte_reg[4]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.313      ; 7.102      ;
+; -5.744 ; cur_byte_reg[2]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.348      ; 7.090      ;
+; -5.742 ; cur_byte_reg[4]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.346      ; 7.086      ;
+; -5.740 ; cur_byte_reg[2]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.348      ; 7.086      ;
+; -5.714 ; cur_byte_reg[4]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.346      ; 7.058      ;
+; -5.692 ; cur_byte_reg[6]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.315      ; 7.005      ;
+; -5.690 ; cur_byte_reg[6]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.315      ; 7.003      ;
+; -5.627 ; cur_byte_reg[6]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.348      ; 6.973      ;
+; -5.623 ; cur_byte_reg[6]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.348      ; 6.969      ;
+; -5.606 ; cur_byte_reg[3]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.314      ; 6.918      ;
+; -5.604 ; cur_byte_reg[3]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.314      ; 6.916      ;
+; -5.576 ; cur_byte_reg[5]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.314      ; 6.888      ;
+; -5.574 ; cur_byte_reg[5]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.314      ; 6.886      ;
+; -5.563 ; cur_byte_reg[1]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.315      ; 6.876      ;
+; -5.561 ; cur_byte_reg[1]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.315      ; 6.874      ;
+; -5.541 ; cur_byte_reg[3]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.347      ; 6.886      ;
+; -5.537 ; cur_byte_reg[3]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.347      ; 6.882      ;
+; -5.525 ; cur_byte_reg[5]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.347      ; 6.870      ;
+; -5.518 ; cur_byte_reg[2]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.315      ; 6.831      ;
+; -5.507 ; state_reg.parsing              ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.314      ; 6.819      ;
+; -5.498 ; cur_byte_reg[1]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.348      ; 6.844      ;
+; -5.494 ; cur_byte_reg[1]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.348      ; 6.840      ;
+; -5.492 ; cur_byte_reg[4]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.313      ; 6.803      ;
+; -5.488 ; cur_byte_reg[5]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.347      ; 6.833      ;
+; -5.474 ; cur_byte_reg[7]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.316      ; 6.788      ;
+; -5.472 ; cur_byte_reg[7]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.316      ; 6.786      ;
+; -5.409 ; cur_byte_reg[7]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.349      ; 6.756      ;
+; -5.405 ; cur_byte_reg[7]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.349      ; 6.752      ;
+; -5.401 ; cur_byte_reg[6]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.315      ; 6.714      ;
+; -5.356 ; state_reg.parsing              ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.314      ; 6.668      ;
+; -5.315 ; cur_byte_reg[3]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.314      ; 6.627      ;
+; -5.276 ; cur_byte_reg[2]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.315      ; 6.589      ;
+; -5.272 ; cur_byte_reg[1]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.315      ; 6.585      ;
+; -5.250 ; cur_byte_reg[4]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.313      ; 6.561      ;
+; -5.232 ; cur_byte_reg[0]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.314      ; 6.544      ;
+; -5.230 ; cur_byte_reg[0]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.314      ; 6.542      ;
+; -5.183 ; cur_byte_reg[7]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.316      ; 6.497      ;
+; -5.178 ; cur_byte_reg[5]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.314      ; 6.490      ;
+; -5.169 ; cur_byte_reg[0]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.347      ; 6.514      ;
+; -5.163 ; cur_byte_reg[0]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.347      ; 6.508      ;
+; -5.159 ; cur_byte_reg[6]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.315      ; 6.472      ;
+; -5.146 ; parse_state_reg.complete       ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.097     ; 6.047      ;
+; -5.144 ; parse_state_reg.complete       ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.097     ; 6.045      ;
+; -5.095 ; parse_state_reg.complete       ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.064     ; 6.029      ;
+; -5.073 ; cur_byte_reg[3]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.314      ; 6.385      ;
+; -5.058 ; parse_state_reg.complete       ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.064     ; 5.992      ;
+; -5.034 ; parse_state_reg.start_transfer ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.097     ; 5.935      ;
+; -5.032 ; parse_state_reg.start_transfer ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.097     ; 5.933      ;
+; -5.030 ; cur_byte_reg[1]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.315      ; 6.343      ;
+; -5.027 ; cur_byte_reg[5]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.314      ; 6.339      ;
+; -4.969 ; parse_state_reg.start_transfer ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.064     ; 5.903      ;
+; -4.965 ; parse_state_reg.start_transfer ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.064     ; 5.899      ;
+; -4.941 ; cur_byte_reg[0]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.314      ; 6.253      ;
+; -4.941 ; cur_byte_reg[7]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.316      ; 6.255      ;
+; -4.898 ; parse_state_reg.no_clients     ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.097     ; 5.799      ;
+; -4.896 ; parse_state_reg.no_clients     ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.097     ; 5.797      ;
+; -4.835 ; parse_state_reg.complete       ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.097     ; 5.736      ;
+; -4.833 ; parse_state_reg.no_clients     ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.064     ; 5.767      ;
+; -4.829 ; parse_state_reg.no_clients     ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.064     ; 5.763      ;
+; -4.743 ; parse_state_reg.start_transfer ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.097     ; 5.644      ;
+; -4.699 ; cur_byte_reg[0]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.314      ; 6.011      ;
+; -4.607 ; parse_state_reg.no_clients     ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.097     ; 5.508      ;
+; -4.597 ; parse_state_reg.complete       ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.097     ; 5.498      ;
+; -4.501 ; parse_state_reg.start_transfer ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.097     ; 5.402      ;
+; -4.365 ; parse_state_reg.no_clients     ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.097     ; 5.266      ;
+; -3.300 ; parse_state_reg.other_command  ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.097     ; 4.201      ;
+; -3.298 ; parse_state_reg.other_command  ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.097     ; 4.199      ;
+; -3.243 ; parse_state_reg.other_command  ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.064     ; 4.177      ;
+; -3.231 ; parse_state_reg.other_command  ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.064     ; 4.165      ;
+; -3.179 ; parse_state_reg.unknown        ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.316      ; 4.493      ;
+; -3.177 ; parse_state_reg.unknown        ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.316      ; 4.491      ;
+; -3.114 ; parse_state_reg.unknown        ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.349      ; 4.461      ;
+; -3.110 ; parse_state_reg.unknown        ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.349      ; 4.457      ;
+; -3.009 ; parse_state_reg.other_command  ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.097     ; 3.910      ;
+; -2.888 ; parse_state_reg.unknown        ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.316      ; 4.202      ;
+; -2.767 ; parse_state_reg.other_command  ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.097     ; 3.668      ;
+; -2.646 ; parse_state_reg.unknown        ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.316      ; 3.960      ;
+; -2.029 ; state_reg.parsing              ; state_reg.done                 ; clk          ; clk         ; 1.000        ; 0.332      ; 3.359      ;
+; -1.666 ; state_reg.parsing              ; cur_byte_reg[0]                ; clk          ; clk         ; 1.000        ; -0.080     ; 2.584      ;
+; -1.654 ; state_reg.parsing              ; cur_byte_reg[7]                ; clk          ; clk         ; 1.000        ; -0.082     ; 2.570      ;
+; -1.498 ; state_reg.parsing              ; cur_byte_reg[1]                ; clk          ; clk         ; 1.000        ; -0.081     ; 2.415      ;
+; -1.402 ; cur_byte_reg[1]                ; cur_byte_reg[1]                ; clk          ; clk         ; 1.000        ; -0.080     ; 2.320      ;
+; -1.368 ; cur_byte_reg[0]                ; cur_byte_reg[0]                ; clk          ; clk         ; 1.000        ; -0.080     ; 2.286      ;
+; -1.341 ; cur_byte_reg[7]                ; cur_byte_reg[7]                ; clk          ; clk         ; 1.000        ; -0.080     ; 2.259      ;
+; -1.254 ; state_reg.idle                 ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.316      ; 2.568      ;
+; -1.252 ; state_reg.idle                 ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.316      ; 2.566      ;
+; -1.236 ; state_reg.parsing              ; state_reg.parsing              ; clk          ; clk         ; 1.000        ; -0.080     ; 2.154      ;
+; -1.201 ; state_reg.idle                 ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.349      ; 2.548      ;
+; -1.168 ; state_reg.idle                 ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.349      ; 2.515      ;
+; -1.112 ; state_reg.idle                 ; state_reg.parsing              ; clk          ; clk         ; 1.000        ; -0.078     ; 2.032      ;
+; -1.042 ; state_reg.parsing              ; cur_byte_reg[2]                ; clk          ; clk         ; 1.000        ; -0.081     ; 1.959      ;
+; -0.797 ; state_reg.parsing              ; cur_byte_reg[5]                ; clk          ; clk         ; 1.000        ; -0.080     ; 1.715      ;
+; -0.718 ; state_reg.idle                 ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.316      ; 2.032      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                             ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.403 ; parse_state_reg.unknown        ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; cur_byte_reg[6]                ; cur_byte_reg[6]                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; state_reg.idle                 ; state_reg.idle                 ; clk          ; clk         ; 0.000        ; 0.080      ; 0.669      ;
+; 0.838 ; state_reg.parsing              ; cur_byte_reg[6]                ; clk          ; clk         ; 0.000        ; 0.079      ; 1.103      ;
+; 0.864 ; state_reg.done                 ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; -0.334     ; 0.716      ;
+; 0.864 ; state_reg.done                 ; state_reg.idle                 ; clk          ; clk         ; 0.000        ; -0.334     ; 0.716      ;
+; 0.875 ; state_reg.idle                 ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; 0.080      ; 1.141      ;
+; 1.034 ; state_reg.parsing              ; cur_byte_reg[3]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.300      ;
+; 1.064 ; cur_byte_reg[5]                ; cur_byte_reg[5]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.330      ;
+; 1.081 ; state_reg.idle                 ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.527      ; 1.794      ;
+; 1.088 ; state_reg.idle                 ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.527      ; 1.801      ;
+; 1.104 ; parse_state_reg.start_transfer ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.131      ; 1.421      ;
+; 1.114 ; parse_state_reg.start_transfer ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.131      ; 1.431      ;
+; 1.121 ; state_reg.idle                 ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.493      ; 1.800      ;
+; 1.146 ; cur_byte_reg[4]                ; cur_byte_reg[4]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.412      ;
+; 1.146 ; cur_byte_reg[3]                ; cur_byte_reg[3]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.412      ;
+; 1.146 ; parse_state_reg.start_transfer ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.097      ; 1.429      ;
+; 1.205 ; cur_byte_reg[2]                ; cur_byte_reg[2]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.471      ;
+; 1.211 ; state_reg.parsing              ; cur_byte_reg[4]                ; clk          ; clk         ; 0.000        ; 0.081      ; 1.478      ;
+; 1.229 ; state_reg.idle                 ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.493      ; 1.908      ;
+; 1.268 ; cur_byte_reg[4]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.490      ; 1.944      ;
+; 1.278 ; parse_state_reg.complete       ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.097      ; 1.561      ;
+; 1.287 ; state_reg.parsing              ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.491      ; 1.964      ;
+; 1.299 ; state_reg.parsing              ; cur_byte_reg[5]                ; clk          ; clk         ; 0.000        ; 0.080      ; 1.565      ;
+; 1.490 ; parse_state_reg.no_clients     ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.131      ; 1.807      ;
+; 1.560 ; state_reg.parsing              ; cur_byte_reg[2]                ; clk          ; clk         ; 0.000        ; 0.079      ; 1.825      ;
+; 1.570 ; parse_state_reg.no_clients     ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.097      ; 1.853      ;
+; 1.626 ; state_reg.idle                 ; state_reg.parsing              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.894      ;
+; 1.734 ; parse_state_reg.other_command  ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.131      ; 2.051      ;
+; 1.746 ; cur_byte_reg[4]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.524      ; 2.456      ;
+; 1.755 ; state_reg.idle                 ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.493      ; 2.434      ;
+; 1.756 ; state_reg.idle                 ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.493      ; 2.435      ;
+; 1.768 ; cur_byte_reg[4]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.490      ; 2.444      ;
+; 1.785 ; state_reg.parsing              ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.525      ; 2.496      ;
+; 1.786 ; state_reg.parsing              ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.525      ; 2.497      ;
+; 1.793 ; cur_byte_reg[4]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.524      ; 2.503      ;
+; 1.798 ; state_reg.parsing              ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.491      ; 2.475      ;
+; 1.799 ; state_reg.parsing              ; state_reg.parsing              ; clk          ; clk         ; 0.000        ; 0.080      ; 2.065      ;
+; 1.825 ; parse_state_reg.other_command  ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.097      ; 2.108      ;
+; 1.876 ; cur_byte_reg[7]                ; cur_byte_reg[7]                ; clk          ; clk         ; 0.000        ; 0.080      ; 2.142      ;
+; 1.899 ; cur_byte_reg[0]                ; cur_byte_reg[0]                ; clk          ; clk         ; 0.000        ; 0.080      ; 2.165      ;
+; 1.950 ; cur_byte_reg[1]                ; cur_byte_reg[1]                ; clk          ; clk         ; 0.000        ; 0.080      ; 2.216      ;
+; 1.977 ; state_reg.parsing              ; cur_byte_reg[1]                ; clk          ; clk         ; 0.000        ; 0.079      ; 2.242      ;
+; 2.133 ; state_reg.parsing              ; cur_byte_reg[0]                ; clk          ; clk         ; 0.000        ; 0.080      ; 2.399      ;
+; 2.134 ; state_reg.parsing              ; cur_byte_reg[7]                ; clk          ; clk         ; 0.000        ; 0.078      ; 2.398      ;
+; 2.152 ; cur_byte_reg[5]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.525      ; 2.863      ;
+; 2.162 ; cur_byte_reg[5]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.525      ; 2.873      ;
+; 2.170 ; cur_byte_reg[0]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.525      ; 2.881      ;
+; 2.180 ; cur_byte_reg[0]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.525      ; 2.891      ;
+; 2.194 ; cur_byte_reg[5]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.491      ; 2.871      ;
+; 2.202 ; cur_byte_reg[5]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.491      ; 2.879      ;
+; 2.203 ; cur_byte_reg[0]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.491      ; 2.880      ;
+; 2.228 ; cur_byte_reg[0]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.491      ; 2.905      ;
+; 2.251 ; cur_byte_reg[6]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.492      ; 2.929      ;
+; 2.441 ; state_reg.parsing              ; state_reg.done                 ; clk          ; clk         ; 0.000        ; 0.509      ; 3.136      ;
+; 2.506 ; cur_byte_reg[6]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.526      ; 3.218      ;
+; 2.533 ; cur_byte_reg[6]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.492      ; 3.211      ;
+; 2.540 ; parse_state_reg.no_clients     ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.097      ; 2.823      ;
+; 2.551 ; cur_byte_reg[6]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.526      ; 3.263      ;
+; 2.592 ; cur_byte_reg[3]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.491      ; 3.269      ;
+; 2.620 ; cur_byte_reg[4]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.490      ; 3.296      ;
+; 2.657 ; cur_byte_reg[2]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.492      ; 3.335      ;
+; 2.674 ; state_reg.parsing              ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.491      ; 3.351      ;
+; 2.685 ; state_reg.parsing              ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.491      ; 3.362      ;
+; 2.709 ; cur_byte_reg[5]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.491      ; 3.386      ;
+; 2.711 ; cur_byte_reg[5]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.491      ; 3.388      ;
+; 2.717 ; cur_byte_reg[6]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.492      ; 3.395      ;
+; 2.727 ; cur_byte_reg[0]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.491      ; 3.404      ;
+; 2.731 ; cur_byte_reg[0]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.491      ; 3.408      ;
+; 2.795 ; parse_state_reg.unknown        ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.527      ; 3.508      ;
+; 2.797 ; cur_byte_reg[3]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.525      ; 3.508      ;
+; 2.807 ; parse_state_reg.unknown        ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.527      ; 3.520      ;
+; 2.813 ; cur_byte_reg[3]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.525      ; 3.524      ;
+; 2.828 ; parse_state_reg.unknown        ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.493      ; 3.507      ;
+; 2.830 ; cur_byte_reg[3]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.491      ; 3.507      ;
+; 2.835 ; parse_state_reg.no_clients     ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.097      ; 3.118      ;
+; 2.837 ; cur_byte_reg[7]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.493      ; 3.516      ;
+; 2.840 ; parse_state_reg.no_clients     ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.131      ; 3.157      ;
+; 2.853 ; parse_state_reg.unknown        ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.493      ; 3.532      ;
+; 2.894 ; cur_byte_reg[2]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.526      ; 3.606      ;
+; 2.910 ; cur_byte_reg[2]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.526      ; 3.622      ;
+; 2.913 ; parse_state_reg.complete       ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.131      ; 3.230      ;
+; 2.920 ; parse_state_reg.complete       ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.131      ; 3.237      ;
+; 2.927 ; cur_byte_reg[2]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.492      ; 3.605      ;
+; 2.953 ; parse_state_reg.complete       ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.097      ; 3.236      ;
+; 2.985 ; parse_state_reg.other_command  ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.131      ; 3.302      ;
+; 3.006 ; parse_state_reg.no_clients     ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.097      ; 3.289      ;
+; 3.013 ; cur_byte_reg[1]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.526      ; 3.725      ;
+; 3.015 ; parse_state_reg.start_transfer ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.097      ; 3.298      ;
+; 3.018 ; parse_state_reg.other_command  ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.097      ; 3.301      ;
+; 3.043 ; parse_state_reg.other_command  ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.097      ; 3.326      ;
+; 3.085 ; cur_byte_reg[7]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.527      ; 3.798      ;
+; 3.086 ; cur_byte_reg[3]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.491      ; 3.763      ;
+; 3.086 ; cur_byte_reg[3]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.491      ; 3.763      ;
+; 3.093 ; cur_byte_reg[1]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.492      ; 3.771      ;
+; 3.112 ; cur_byte_reg[7]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.493      ; 3.791      ;
+; 3.120 ; cur_byte_reg[1]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.526      ; 3.832      ;
+; 3.136 ; cur_byte_reg[1]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.492      ; 3.814      ;
+; 3.136 ; cur_byte_reg[7]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.527      ; 3.849      ;
+; 3.137 ; cur_byte_reg[1]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.492      ; 3.815      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 158.13 MHz ; 158.13 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -5.324 ; -41.140           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.354 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -26.130                         ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                              ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.324 ; state_reg.parsing              ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.288      ; 6.611      ;
+; -5.322 ; state_reg.parsing              ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.288      ; 6.609      ;
+; -5.264 ; state_reg.parsing              ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.584      ;
+; -5.240 ; state_reg.parsing              ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.560      ;
+; -5.238 ; cur_byte_reg[4]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.288      ; 6.525      ;
+; -5.236 ; cur_byte_reg[4]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.288      ; 6.523      ;
+; -5.232 ; cur_byte_reg[2]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.289      ; 6.520      ;
+; -5.230 ; cur_byte_reg[2]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.289      ; 6.518      ;
+; -5.178 ; cur_byte_reg[4]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.498      ;
+; -5.173 ; cur_byte_reg[2]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.322      ; 6.494      ;
+; -5.160 ; cur_byte_reg[2]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.322      ; 6.481      ;
+; -5.154 ; cur_byte_reg[4]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.474      ;
+; -5.089 ; cur_byte_reg[6]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.289      ; 6.377      ;
+; -5.087 ; cur_byte_reg[6]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.289      ; 6.375      ;
+; -5.032 ; cur_byte_reg[3]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.288      ; 6.319      ;
+; -5.030 ; cur_byte_reg[6]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.322      ; 6.351      ;
+; -5.030 ; cur_byte_reg[3]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.288      ; 6.317      ;
+; -5.017 ; cur_byte_reg[6]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.322      ; 6.338      ;
+; -4.989 ; cur_byte_reg[5]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.288      ; 6.276      ;
+; -4.987 ; cur_byte_reg[5]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.288      ; 6.274      ;
+; -4.973 ; cur_byte_reg[3]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.293      ;
+; -4.972 ; cur_byte_reg[1]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.289      ; 6.260      ;
+; -4.970 ; cur_byte_reg[1]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.289      ; 6.258      ;
+; -4.968 ; state_reg.parsing              ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.288      ; 6.255      ;
+; -4.960 ; cur_byte_reg[3]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.280      ;
+; -4.940 ; cur_byte_reg[2]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.289      ; 6.228      ;
+; -4.929 ; cur_byte_reg[5]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.249      ;
+; -4.928 ; cur_byte_reg[7]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.290      ; 6.217      ;
+; -4.926 ; cur_byte_reg[7]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.290      ; 6.215      ;
+; -4.913 ; cur_byte_reg[1]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.322      ; 6.234      ;
+; -4.905 ; cur_byte_reg[5]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.321      ; 6.225      ;
+; -4.900 ; cur_byte_reg[1]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.322      ; 6.221      ;
+; -4.882 ; cur_byte_reg[4]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.288      ; 6.169      ;
+; -4.869 ; cur_byte_reg[7]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.323      ; 6.191      ;
+; -4.856 ; cur_byte_reg[7]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.323      ; 6.178      ;
+; -4.820 ; state_reg.parsing              ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.288      ; 6.107      ;
+; -4.797 ; cur_byte_reg[6]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.289      ; 6.085      ;
+; -4.746 ; cur_byte_reg[2]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.289      ; 6.034      ;
+; -4.740 ; cur_byte_reg[3]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.288      ; 6.027      ;
+; -4.734 ; cur_byte_reg[4]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.288      ; 6.021      ;
+; -4.680 ; cur_byte_reg[1]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.289      ; 5.968      ;
+; -4.674 ; cur_byte_reg[0]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.288      ; 5.961      ;
+; -4.672 ; cur_byte_reg[0]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.288      ; 5.959      ;
+; -4.636 ; cur_byte_reg[7]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.290      ; 5.925      ;
+; -4.633 ; cur_byte_reg[5]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.288      ; 5.920      ;
+; -4.616 ; parse_state_reg.complete       ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.086     ; 5.529      ;
+; -4.614 ; cur_byte_reg[0]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.321      ; 5.934      ;
+; -4.614 ; parse_state_reg.complete       ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.086     ; 5.527      ;
+; -4.603 ; cur_byte_reg[6]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.289      ; 5.891      ;
+; -4.601 ; cur_byte_reg[0]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.321      ; 5.921      ;
+; -4.557 ; parse_state_reg.start_transfer ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.086     ; 5.470      ;
+; -4.557 ; parse_state_reg.complete       ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.053     ; 5.503      ;
+; -4.555 ; parse_state_reg.start_transfer ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.086     ; 5.468      ;
+; -4.546 ; cur_byte_reg[3]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.288      ; 5.833      ;
+; -4.544 ; parse_state_reg.complete       ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.053     ; 5.490      ;
+; -4.498 ; parse_state_reg.start_transfer ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.053     ; 5.444      ;
+; -4.486 ; cur_byte_reg[1]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.289      ; 5.774      ;
+; -4.485 ; parse_state_reg.start_transfer ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.053     ; 5.431      ;
+; -4.485 ; cur_byte_reg[5]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.288      ; 5.772      ;
+; -4.442 ; cur_byte_reg[7]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.290      ; 5.731      ;
+; -4.412 ; parse_state_reg.no_clients     ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.086     ; 5.325      ;
+; -4.410 ; parse_state_reg.no_clients     ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.086     ; 5.323      ;
+; -4.381 ; cur_byte_reg[0]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.288      ; 5.668      ;
+; -4.353 ; parse_state_reg.no_clients     ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.053     ; 5.299      ;
+; -4.340 ; parse_state_reg.no_clients     ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.053     ; 5.286      ;
+; -4.324 ; parse_state_reg.complete       ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.086     ; 5.237      ;
+; -4.265 ; parse_state_reg.start_transfer ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.086     ; 5.178      ;
+; -4.187 ; cur_byte_reg[0]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.288      ; 5.474      ;
+; -4.130 ; parse_state_reg.complete       ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.086     ; 5.043      ;
+; -4.120 ; parse_state_reg.no_clients     ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.086     ; 5.033      ;
+; -4.071 ; parse_state_reg.start_transfer ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.086     ; 4.984      ;
+; -3.926 ; parse_state_reg.no_clients     ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.086     ; 4.839      ;
+; -2.975 ; parse_state_reg.other_command  ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.086     ; 3.888      ;
+; -2.973 ; parse_state_reg.other_command  ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.086     ; 3.886      ;
+; -2.916 ; parse_state_reg.other_command  ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.053     ; 3.862      ;
+; -2.903 ; parse_state_reg.other_command  ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.053     ; 3.849      ;
+; -2.823 ; parse_state_reg.unknown        ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.290      ; 4.112      ;
+; -2.821 ; parse_state_reg.unknown        ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.290      ; 4.110      ;
+; -2.764 ; parse_state_reg.unknown        ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.323      ; 4.086      ;
+; -2.751 ; parse_state_reg.unknown        ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.323      ; 4.073      ;
+; -2.683 ; parse_state_reg.other_command  ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.086     ; 3.596      ;
+; -2.531 ; parse_state_reg.unknown        ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.290      ; 3.820      ;
+; -2.489 ; parse_state_reg.other_command  ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.086     ; 3.402      ;
+; -2.337 ; parse_state_reg.unknown        ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.290      ; 3.626      ;
+; -1.852 ; state_reg.parsing              ; state_reg.done                 ; clk          ; clk         ; 1.000        ; 0.306      ; 3.157      ;
+; -1.443 ; state_reg.parsing              ; cur_byte_reg[7]                ; clk          ; clk         ; 1.000        ; -0.074     ; 2.368      ;
+; -1.432 ; state_reg.parsing              ; cur_byte_reg[0]                ; clk          ; clk         ; 1.000        ; -0.072     ; 2.359      ;
+; -1.300 ; state_reg.parsing              ; cur_byte_reg[1]                ; clk          ; clk         ; 1.000        ; -0.073     ; 2.226      ;
+; -1.215 ; cur_byte_reg[1]                ; cur_byte_reg[1]                ; clk          ; clk         ; 1.000        ; -0.072     ; 2.142      ;
+; -1.150 ; cur_byte_reg[0]                ; cur_byte_reg[0]                ; clk          ; clk         ; 1.000        ; -0.072     ; 2.077      ;
+; -1.129 ; cur_byte_reg[7]                ; cur_byte_reg[7]                ; clk          ; clk         ; 1.000        ; -0.072     ; 2.056      ;
+; -1.086 ; state_reg.parsing              ; state_reg.parsing              ; clk          ; clk         ; 1.000        ; -0.072     ; 2.013      ;
+; -1.078 ; state_reg.idle                 ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.290      ; 2.367      ;
+; -1.076 ; state_reg.idle                 ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.290      ; 2.365      ;
+; -1.016 ; state_reg.idle                 ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.323      ; 2.338      ;
+; -0.996 ; state_reg.idle                 ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.323      ; 2.318      ;
+; -0.938 ; state_reg.idle                 ; state_reg.parsing              ; clk          ; clk         ; 1.000        ; -0.070     ; 1.867      ;
+; -0.842 ; state_reg.parsing              ; cur_byte_reg[2]                ; clk          ; clk         ; 1.000        ; -0.073     ; 1.768      ;
+; -0.628 ; state_reg.parsing              ; cur_byte_reg[5]                ; clk          ; clk         ; 1.000        ; -0.072     ; 1.555      ;
+; -0.579 ; state_reg.idle                 ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.290      ; 1.868      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                              ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.354 ; parse_state_reg.unknown        ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; cur_byte_reg[6]                ; cur_byte_reg[6]                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state_reg.idle                 ; state_reg.idle                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.765 ; state_reg.parsing              ; cur_byte_reg[6]                ; clk          ; clk         ; 0.000        ; 0.071      ; 1.007      ;
+; 0.787 ; state_reg.done                 ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; -0.308     ; 0.650      ;
+; 0.787 ; state_reg.done                 ; state_reg.idle                 ; clk          ; clk         ; 0.000        ; -0.308     ; 0.650      ;
+; 0.807 ; state_reg.idle                 ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; 0.072      ; 1.050      ;
+; 0.947 ; state_reg.parsing              ; cur_byte_reg[3]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.190      ;
+; 0.961 ; state_reg.idle                 ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.483      ; 1.615      ;
+; 0.973 ; cur_byte_reg[5]                ; cur_byte_reg[5]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.216      ;
+; 0.978 ; state_reg.idle                 ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.483      ; 1.632      ;
+; 1.012 ; state_reg.idle                 ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.448      ; 1.631      ;
+; 1.012 ; parse_state_reg.start_transfer ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.121      ; 1.304      ;
+; 1.029 ; parse_state_reg.start_transfer ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.121      ; 1.321      ;
+; 1.047 ; cur_byte_reg[4]                ; cur_byte_reg[4]                ; clk          ; clk         ; 0.000        ; 0.071      ; 1.289      ;
+; 1.048 ; cur_byte_reg[3]                ; cur_byte_reg[3]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.291      ;
+; 1.063 ; parse_state_reg.start_transfer ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.086      ; 1.320      ;
+; 1.108 ; state_reg.idle                 ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.448      ; 1.727      ;
+; 1.112 ; cur_byte_reg[2]                ; cur_byte_reg[2]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.355      ;
+; 1.118 ; state_reg.parsing              ; cur_byte_reg[4]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.361      ;
+; 1.163 ; state_reg.parsing              ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.446      ; 1.780      ;
+; 1.171 ; cur_byte_reg[4]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.445      ; 1.787      ;
+; 1.184 ; parse_state_reg.complete       ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.086      ; 1.441      ;
+; 1.187 ; state_reg.parsing              ; cur_byte_reg[5]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.430      ;
+; 1.378 ; parse_state_reg.no_clients     ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.121      ; 1.670      ;
+; 1.420 ; state_reg.parsing              ; cur_byte_reg[2]                ; clk          ; clk         ; 0.000        ; 0.071      ; 1.662      ;
+; 1.453 ; parse_state_reg.no_clients     ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.086      ; 1.710      ;
+; 1.485 ; state_reg.idle                 ; state_reg.parsing              ; clk          ; clk         ; 0.000        ; 0.074      ; 1.730      ;
+; 1.563 ; state_reg.idle                 ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.448      ; 2.182      ;
+; 1.565 ; state_reg.idle                 ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.448      ; 2.184      ;
+; 1.565 ; parse_state_reg.other_command  ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.121      ; 1.857      ;
+; 1.598 ; state_reg.parsing              ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.481      ; 2.250      ;
+; 1.602 ; state_reg.parsing              ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.481      ; 2.254      ;
+; 1.606 ; cur_byte_reg[4]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.480      ; 2.257      ;
+; 1.610 ; cur_byte_reg[4]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.480      ; 2.261      ;
+; 1.611 ; state_reg.parsing              ; state_reg.parsing              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.854      ;
+; 1.615 ; state_reg.parsing              ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.446      ; 2.232      ;
+; 1.623 ; cur_byte_reg[4]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.445      ; 2.239      ;
+; 1.661 ; parse_state_reg.other_command  ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.918      ;
+; 1.711 ; cur_byte_reg[7]                ; cur_byte_reg[7]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.954      ;
+; 1.748 ; cur_byte_reg[0]                ; cur_byte_reg[0]                ; clk          ; clk         ; 0.000        ; 0.072      ; 1.991      ;
+; 1.767 ; cur_byte_reg[1]                ; cur_byte_reg[1]                ; clk          ; clk         ; 0.000        ; 0.072      ; 2.010      ;
+; 1.792 ; state_reg.parsing              ; cur_byte_reg[1]                ; clk          ; clk         ; 0.000        ; 0.071      ; 2.034      ;
+; 1.918 ; state_reg.parsing              ; cur_byte_reg[7]                ; clk          ; clk         ; 0.000        ; 0.070      ; 2.159      ;
+; 1.931 ; cur_byte_reg[0]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.481      ; 2.583      ;
+; 1.934 ; state_reg.parsing              ; cur_byte_reg[0]                ; clk          ; clk         ; 0.000        ; 0.072      ; 2.177      ;
+; 1.942 ; cur_byte_reg[5]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.481      ; 2.594      ;
+; 1.951 ; cur_byte_reg[0]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.481      ; 2.603      ;
+; 1.962 ; cur_byte_reg[5]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.481      ; 2.614      ;
+; 1.965 ; cur_byte_reg[0]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.446      ; 2.582      ;
+; 1.976 ; cur_byte_reg[5]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.446      ; 2.593      ;
+; 1.993 ; cur_byte_reg[6]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.447      ; 2.611      ;
+; 2.002 ; cur_byte_reg[0]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.446      ; 2.619      ;
+; 2.013 ; cur_byte_reg[5]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.446      ; 2.630      ;
+; 2.165 ; state_reg.parsing              ; state_reg.done                 ; clk          ; clk         ; 0.000        ; 0.466      ; 2.802      ;
+; 2.245 ; cur_byte_reg[6]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.482      ; 2.898      ;
+; 2.259 ; cur_byte_reg[6]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.447      ; 2.877      ;
+; 2.260 ; cur_byte_reg[6]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.482      ; 2.913      ;
+; 2.309 ; parse_state_reg.no_clients     ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.086      ; 2.566      ;
+; 2.360 ; cur_byte_reg[3]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.446      ; 2.977      ;
+; 2.388 ; cur_byte_reg[4]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.445      ; 3.004      ;
+; 2.424 ; state_reg.parsing              ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.446      ; 3.041      ;
+; 2.426 ; cur_byte_reg[2]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.447      ; 3.044      ;
+; 2.440 ; cur_byte_reg[6]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.447      ; 3.058      ;
+; 2.446 ; state_reg.parsing              ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.446      ; 3.063      ;
+; 2.460 ; cur_byte_reg[0]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.446      ; 3.077      ;
+; 2.464 ; cur_byte_reg[0]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.446      ; 3.081      ;
+; 2.471 ; cur_byte_reg[5]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.446      ; 3.088      ;
+; 2.475 ; cur_byte_reg[5]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.446      ; 3.092      ;
+; 2.500 ; parse_state_reg.unknown        ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.483      ; 3.154      ;
+; 2.520 ; parse_state_reg.unknown        ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.483      ; 3.174      ;
+; 2.534 ; parse_state_reg.unknown        ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.448      ; 3.153      ;
+; 2.539 ; cur_byte_reg[3]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.481      ; 3.191      ;
+; 2.556 ; cur_byte_reg[3]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.481      ; 3.208      ;
+; 2.571 ; parse_state_reg.unknown        ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.448      ; 3.190      ;
+; 2.573 ; cur_byte_reg[2]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.482      ; 3.226      ;
+; 2.575 ; parse_state_reg.no_clients     ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.086      ; 2.832      ;
+; 2.576 ; parse_state_reg.no_clients     ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.121      ; 2.868      ;
+; 2.587 ; cur_byte_reg[7]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.448      ; 3.206      ;
+; 2.590 ; cur_byte_reg[3]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.446      ; 3.207      ;
+; 2.593 ; cur_byte_reg[2]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.482      ; 3.246      ;
+; 2.599 ; parse_state_reg.complete       ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.121      ; 2.891      ;
+; 2.607 ; cur_byte_reg[2]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.447      ; 3.225      ;
+; 2.619 ; parse_state_reg.complete       ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.121      ; 2.911      ;
+; 2.633 ; parse_state_reg.complete       ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.086      ; 2.890      ;
+; 2.707 ; parse_state_reg.other_command  ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.121      ; 2.999      ;
+; 2.708 ; cur_byte_reg[1]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.482      ; 3.361      ;
+; 2.741 ; parse_state_reg.other_command  ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.086      ; 2.998      ;
+; 2.742 ; parse_state_reg.start_transfer ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.086      ; 2.999      ;
+; 2.756 ; parse_state_reg.no_clients     ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.086      ; 3.013      ;
+; 2.778 ; parse_state_reg.other_command  ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.086      ; 3.035      ;
+; 2.788 ; cur_byte_reg[1]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.447      ; 3.406      ;
+; 2.790 ; cur_byte_reg[1]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.447      ; 3.408      ;
+; 2.795 ; cur_byte_reg[7]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.483      ; 3.449      ;
+; 2.822 ; cur_byte_reg[1]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.482      ; 3.475      ;
+; 2.824 ; cur_byte_reg[7]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.448      ; 3.443      ;
+; 2.828 ; cur_byte_reg[3]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.446      ; 3.445      ;
+; 2.838 ; cur_byte_reg[7]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.483      ; 3.492      ;
+; 2.861 ; cur_byte_reg[3]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.446      ; 3.478      ;
+; 2.873 ; cur_byte_reg[1]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.447      ; 3.491      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -2.301 ; -14.994           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.182 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -22.257                         ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                              ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.301 ; cur_byte_reg[2]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.151      ; 3.439      ;
+; -2.299 ; cur_byte_reg[2]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.151      ; 3.437      ;
+; -2.295 ; cur_byte_reg[2]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.166      ; 3.448      ;
+; -2.287 ; state_reg.parsing              ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.150      ; 3.424      ;
+; -2.286 ; state_reg.parsing              ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.150      ; 3.423      ;
+; -2.269 ; state_reg.parsing              ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.421      ;
+; -2.269 ; cur_byte_reg[4]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.149      ; 3.405      ;
+; -2.268 ; cur_byte_reg[4]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.404      ;
+; -2.267 ; cur_byte_reg[2]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.166      ; 3.420      ;
+; -2.267 ; cur_byte_reg[6]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.151      ; 3.405      ;
+; -2.265 ; cur_byte_reg[6]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.151      ; 3.403      ;
+; -2.263 ; state_reg.parsing              ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.415      ;
+; -2.261 ; cur_byte_reg[6]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.166      ; 3.414      ;
+; -2.251 ; cur_byte_reg[4]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.164      ; 3.402      ;
+; -2.245 ; cur_byte_reg[4]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.164      ; 3.396      ;
+; -2.233 ; cur_byte_reg[6]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.166      ; 3.386      ;
+; -2.201 ; state_reg.parsing              ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.150      ; 3.338      ;
+; -2.183 ; cur_byte_reg[4]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.149      ; 3.319      ;
+; -2.137 ; cur_byte_reg[1]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.151      ; 3.275      ;
+; -2.135 ; cur_byte_reg[1]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.151      ; 3.273      ;
+; -2.131 ; cur_byte_reg[1]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.166      ; 3.284      ;
+; -2.127 ; cur_byte_reg[7]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.153      ; 3.267      ;
+; -2.125 ; cur_byte_reg[7]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.153      ; 3.265      ;
+; -2.121 ; cur_byte_reg[7]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.168      ; 3.276      ;
+; -2.113 ; cur_byte_reg[3]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.150      ; 3.250      ;
+; -2.112 ; cur_byte_reg[2]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.151      ; 3.250      ;
+; -2.111 ; cur_byte_reg[3]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.150      ; 3.248      ;
+; -2.107 ; cur_byte_reg[3]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.259      ;
+; -2.104 ; cur_byte_reg[5]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.150      ; 3.241      ;
+; -2.103 ; cur_byte_reg[1]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.166      ; 3.256      ;
+; -2.102 ; cur_byte_reg[5]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.150      ; 3.239      ;
+; -2.098 ; cur_byte_reg[5]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.250      ;
+; -2.093 ; cur_byte_reg[7]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.168      ; 3.248      ;
+; -2.079 ; cur_byte_reg[3]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.231      ;
+; -2.078 ; cur_byte_reg[6]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.151      ; 3.216      ;
+; -2.070 ; cur_byte_reg[5]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.222      ;
+; -2.056 ; cur_byte_reg[2]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.151      ; 3.194      ;
+; -2.052 ; state_reg.parsing              ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.150      ; 3.189      ;
+; -2.043 ; cur_byte_reg[0]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.150      ; 3.180      ;
+; -2.041 ; cur_byte_reg[0]                ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.150      ; 3.178      ;
+; -2.037 ; cur_byte_reg[0]                ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.189      ;
+; -2.034 ; cur_byte_reg[4]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.149      ; 3.170      ;
+; -2.022 ; cur_byte_reg[6]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.151      ; 3.160      ;
+; -2.009 ; cur_byte_reg[0]                ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.165      ; 3.161      ;
+; -2.008 ; cur_byte_reg[3]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.150      ; 3.145      ;
+; -2.003 ; cur_byte_reg[1]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.151      ; 3.141      ;
+; -1.995 ; parse_state_reg.complete       ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.050     ; 2.932      ;
+; -1.993 ; parse_state_reg.complete       ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.050     ; 2.930      ;
+; -1.989 ; parse_state_reg.complete       ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.941      ;
+; -1.981 ; parse_state_reg.start_transfer ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.050     ; 2.918      ;
+; -1.979 ; parse_state_reg.start_transfer ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.050     ; 2.916      ;
+; -1.975 ; parse_state_reg.start_transfer ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.927      ;
+; -1.961 ; parse_state_reg.complete       ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.913      ;
+; -1.952 ; cur_byte_reg[5]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.150      ; 3.089      ;
+; -1.947 ; parse_state_reg.start_transfer ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.899      ;
+; -1.938 ; cur_byte_reg[7]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.153      ; 3.078      ;
+; -1.898 ; parse_state_reg.no_clients     ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.050     ; 2.835      ;
+; -1.896 ; parse_state_reg.no_clients     ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.050     ; 2.833      ;
+; -1.892 ; cur_byte_reg[1]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.151      ; 3.030      ;
+; -1.892 ; parse_state_reg.no_clients     ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.844      ;
+; -1.882 ; cur_byte_reg[7]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.153      ; 3.022      ;
+; -1.868 ; cur_byte_reg[3]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.150      ; 3.005      ;
+; -1.864 ; parse_state_reg.no_clients     ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.816      ;
+; -1.859 ; cur_byte_reg[5]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.150      ; 2.996      ;
+; -1.854 ; cur_byte_reg[0]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.150      ; 2.991      ;
+; -1.838 ; parse_state_reg.complete       ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.050     ; 2.775      ;
+; -1.798 ; cur_byte_reg[0]                ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.150      ; 2.935      ;
+; -1.792 ; parse_state_reg.start_transfer ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.050     ; 2.729      ;
+; -1.750 ; parse_state_reg.complete       ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.050     ; 2.687      ;
+; -1.736 ; parse_state_reg.start_transfer ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.050     ; 2.673      ;
+; -1.709 ; parse_state_reg.no_clients     ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.050     ; 2.646      ;
+; -1.653 ; parse_state_reg.no_clients     ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.050     ; 2.590      ;
+; -1.105 ; parse_state_reg.other_command  ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; -0.050     ; 2.042      ;
+; -1.103 ; parse_state_reg.other_command  ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; -0.050     ; 2.040      ;
+; -1.099 ; parse_state_reg.other_command  ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.051      ;
+; -1.071 ; parse_state_reg.other_command  ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; -0.035     ; 2.023      ;
+; -1.054 ; parse_state_reg.unknown        ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.153      ; 2.194      ;
+; -1.052 ; parse_state_reg.unknown        ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.153      ; 2.192      ;
+; -1.048 ; parse_state_reg.unknown        ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.168      ; 2.203      ;
+; -1.020 ; parse_state_reg.unknown        ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.168      ; 2.175      ;
+; -0.916 ; parse_state_reg.other_command  ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; -0.050     ; 1.853      ;
+; -0.865 ; parse_state_reg.unknown        ; parse_state_reg.start_transfer ; clk          ; clk         ; 1.000        ; 0.153      ; 2.005      ;
+; -0.860 ; parse_state_reg.other_command  ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; -0.050     ; 1.797      ;
+; -0.809 ; parse_state_reg.unknown        ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.153      ; 1.949      ;
+; -0.589 ; state_reg.parsing              ; state_reg.done                 ; clk          ; clk         ; 1.000        ; 0.151      ; 1.727      ;
+; -0.357 ; state_reg.parsing              ; cur_byte_reg[0]                ; clk          ; clk         ; 1.000        ; -0.041     ; 1.303      ;
+; -0.301 ; state_reg.parsing              ; cur_byte_reg[7]                ; clk          ; clk         ; 1.000        ; -0.044     ; 1.244      ;
+; -0.217 ; state_reg.parsing              ; cur_byte_reg[1]                ; clk          ; clk         ; 1.000        ; -0.042     ; 1.162      ;
+; -0.211 ; cur_byte_reg[0]                ; cur_byte_reg[0]                ; clk          ; clk         ; 1.000        ; -0.041     ; 1.157      ;
+; -0.186 ; cur_byte_reg[1]                ; cur_byte_reg[1]                ; clk          ; clk         ; 1.000        ; -0.041     ; 1.132      ;
+; -0.147 ; cur_byte_reg[7]                ; cur_byte_reg[7]                ; clk          ; clk         ; 1.000        ; -0.041     ; 1.093      ;
+; -0.109 ; state_reg.parsing              ; state_reg.parsing              ; clk          ; clk         ; 1.000        ; -0.041     ; 1.055      ;
+; -0.106 ; state_reg.idle                 ; parse_state_reg.other_command  ; clk          ; clk         ; 1.000        ; 0.153      ; 1.246      ;
+; -0.104 ; state_reg.idle                 ; parse_state_reg.no_clients     ; clk          ; clk         ; 1.000        ; 0.153      ; 1.244      ;
+; -0.089 ; state_reg.idle                 ; output_code_reg[1]             ; clk          ; clk         ; 1.000        ; 0.168      ; 1.244      ;
+; -0.080 ; state_reg.idle                 ; output_code_reg[0]             ; clk          ; clk         ; 1.000        ; 0.168      ; 1.235      ;
+; 0.000  ; state_reg.parsing              ; cur_byte_reg[2]                ; clk          ; clk         ; 1.000        ; -0.042     ; 0.945      ;
+; 0.019  ; state_reg.idle                 ; state_reg.parsing              ; clk          ; clk         ; 1.000        ; -0.038     ; 0.930      ;
+; 0.138  ; state_reg.parsing              ; cur_byte_reg[5]                ; clk          ; clk         ; 1.000        ; -0.041     ; 0.808      ;
+; 0.173  ; state_reg.idle                 ; parse_state_reg.complete       ; clk          ; clk         ; 1.000        ; 0.153      ; 0.967      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                              ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.182 ; parse_state_reg.unknown        ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; cur_byte_reg[6]                ; cur_byte_reg[6]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state_reg.idle                 ; state_reg.idle                 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.377 ; state_reg.parsing              ; cur_byte_reg[6]                ; clk          ; clk         ; 0.000        ; 0.040      ; 0.501      ;
+; 0.396 ; state_reg.idle                 ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.521      ;
+; 0.403 ; state_reg.done                 ; parse_state_reg.unknown        ; clk          ; clk         ; 0.000        ; -0.154     ; 0.333      ;
+; 0.403 ; state_reg.done                 ; state_reg.idle                 ; clk          ; clk         ; 0.000        ; -0.154     ; 0.333      ;
+; 0.463 ; state_reg.parsing              ; cur_byte_reg[3]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.588      ;
+; 0.481 ; cur_byte_reg[5]                ; cur_byte_reg[5]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.606      ;
+; 0.495 ; state_reg.idle                 ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.259      ; 0.838      ;
+; 0.496 ; state_reg.idle                 ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.259      ; 0.839      ;
+; 0.498 ; parse_state_reg.start_transfer ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.065      ; 0.647      ;
+; 0.501 ; parse_state_reg.start_transfer ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.065      ; 0.650      ;
+; 0.508 ; state_reg.idle                 ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.244      ; 0.836      ;
+; 0.512 ; parse_state_reg.start_transfer ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.050      ; 0.646      ;
+; 0.515 ; cur_byte_reg[4]                ; cur_byte_reg[4]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.640      ;
+; 0.516 ; cur_byte_reg[3]                ; cur_byte_reg[3]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.641      ;
+; 0.533 ; state_reg.parsing              ; cur_byte_reg[4]                ; clk          ; clk         ; 0.000        ; 0.042      ; 0.659      ;
+; 0.540 ; cur_byte_reg[2]                ; cur_byte_reg[2]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.665      ;
+; 0.566 ; cur_byte_reg[4]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.240      ; 0.890      ;
+; 0.567 ; state_reg.idle                 ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.244      ; 0.895      ;
+; 0.573 ; parse_state_reg.complete       ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.050      ; 0.707      ;
+; 0.584 ; state_reg.parsing              ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.241      ; 0.909      ;
+; 0.596 ; state_reg.parsing              ; cur_byte_reg[5]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.721      ;
+; 0.670 ; parse_state_reg.no_clients     ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.065      ; 0.819      ;
+; 0.699 ; parse_state_reg.no_clients     ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.050      ; 0.833      ;
+; 0.702 ; state_reg.parsing              ; cur_byte_reg[2]                ; clk          ; clk         ; 0.000        ; 0.040      ; 0.826      ;
+; 0.762 ; state_reg.idle                 ; state_reg.parsing              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.890      ;
+; 0.779 ; cur_byte_reg[4]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.255      ; 1.118      ;
+; 0.781 ; parse_state_reg.other_command  ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.065      ; 0.930      ;
+; 0.789 ; cur_byte_reg[4]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.240      ; 1.113      ;
+; 0.791 ; state_reg.idle                 ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.244      ; 1.119      ;
+; 0.793 ; state_reg.idle                 ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.244      ; 1.121      ;
+; 0.797 ; state_reg.parsing              ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.137      ;
+; 0.798 ; state_reg.parsing              ; state_reg.parsing              ; clk          ; clk         ; 0.000        ; 0.041      ; 0.923      ;
+; 0.802 ; cur_byte_reg[4]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.255      ; 1.141      ;
+; 0.807 ; state_reg.parsing              ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.241      ; 1.132      ;
+; 0.810 ; parse_state_reg.other_command  ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.050      ; 0.944      ;
+; 0.820 ; state_reg.parsing              ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.160      ;
+; 0.826 ; cur_byte_reg[7]                ; cur_byte_reg[7]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.951      ;
+; 0.871 ; cur_byte_reg[1]                ; cur_byte_reg[1]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.996      ;
+; 0.874 ; cur_byte_reg[0]                ; cur_byte_reg[0]                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.999      ;
+; 0.903 ; state_reg.parsing              ; cur_byte_reg[1]                ; clk          ; clk         ; 0.000        ; 0.040      ; 1.027      ;
+; 0.960 ; state_reg.parsing              ; cur_byte_reg[7]                ; clk          ; clk         ; 0.000        ; 0.038      ; 1.082      ;
+; 0.968 ; cur_byte_reg[5]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.308      ;
+; 0.971 ; cur_byte_reg[5]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.311      ;
+; 0.982 ; cur_byte_reg[5]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.241      ; 1.307      ;
+; 0.996 ; cur_byte_reg[0]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.336      ;
+; 0.999 ; cur_byte_reg[0]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.339      ;
+; 1.008 ; state_reg.parsing              ; cur_byte_reg[0]                ; clk          ; clk         ; 0.000        ; 0.041      ; 1.133      ;
+; 1.008 ; cur_byte_reg[6]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.334      ;
+; 1.009 ; cur_byte_reg[5]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.241      ; 1.334      ;
+; 1.010 ; cur_byte_reg[0]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.241      ; 1.335      ;
+; 1.037 ; cur_byte_reg[0]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.241      ; 1.362      ;
+; 1.119 ; cur_byte_reg[6]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.257      ; 1.460      ;
+; 1.131 ; cur_byte_reg[6]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.242      ; 1.457      ;
+; 1.145 ; cur_byte_reg[6]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.257      ; 1.486      ;
+; 1.157 ; state_reg.parsing              ; state_reg.done                 ; clk          ; clk         ; 0.000        ; 0.241      ; 1.482      ;
+; 1.205 ; parse_state_reg.no_clients     ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.050      ; 1.339      ;
+; 1.221 ; state_reg.parsing              ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.241      ; 1.546      ;
+; 1.230 ; state_reg.parsing              ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.241      ; 1.555      ;
+; 1.230 ; cur_byte_reg[4]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.240      ; 1.554      ;
+; 1.234 ; cur_byte_reg[5]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.241      ; 1.559      ;
+; 1.237 ; parse_state_reg.unknown        ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.259      ; 1.580      ;
+; 1.239 ; cur_byte_reg[5]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.241      ; 1.564      ;
+; 1.240 ; parse_state_reg.unknown        ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.259      ; 1.583      ;
+; 1.242 ; cur_byte_reg[3]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.241      ; 1.567      ;
+; 1.251 ; parse_state_reg.unknown        ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.244      ; 1.579      ;
+; 1.252 ; cur_byte_reg[6]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.242      ; 1.578      ;
+; 1.262 ; cur_byte_reg[0]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.241      ; 1.587      ;
+; 1.267 ; cur_byte_reg[0]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.241      ; 1.592      ;
+; 1.270 ; cur_byte_reg[2]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.596      ;
+; 1.278 ; parse_state_reg.unknown        ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.244      ; 1.606      ;
+; 1.301 ; cur_byte_reg[3]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.641      ;
+; 1.302 ; cur_byte_reg[3]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.256      ; 1.642      ;
+; 1.314 ; cur_byte_reg[3]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.241      ; 1.639      ;
+; 1.318 ; parse_state_reg.complete       ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.065      ; 1.467      ;
+; 1.321 ; parse_state_reg.complete       ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.065      ; 1.470      ;
+; 1.321 ; cur_byte_reg[7]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.244      ; 1.649      ;
+; 1.328 ; parse_state_reg.no_clients     ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.050      ; 1.462      ;
+; 1.332 ; parse_state_reg.complete       ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.050      ; 1.466      ;
+; 1.337 ; cur_byte_reg[1]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.257      ; 1.678      ;
+; 1.339 ; cur_byte_reg[2]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.257      ; 1.680      ;
+; 1.342 ; cur_byte_reg[2]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.257      ; 1.683      ;
+; 1.342 ; parse_state_reg.no_clients     ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.065      ; 1.491      ;
+; 1.353 ; cur_byte_reg[2]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.242      ; 1.679      ;
+; 1.366 ; cur_byte_reg[1]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.242      ; 1.692      ;
+; 1.376 ; cur_byte_reg[3]                ; parse_state_reg.no_clients     ; clk          ; clk         ; 0.000        ; 0.241      ; 1.701      ;
+; 1.387 ; parse_state_reg.other_command  ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.065      ; 1.536      ;
+; 1.397 ; cur_byte_reg[1]                ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.723      ;
+; 1.401 ; parse_state_reg.other_command  ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.050      ; 1.535      ;
+; 1.403 ; parse_state_reg.no_clients     ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.537      ;
+; 1.428 ; parse_state_reg.other_command  ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.050      ; 1.562      ;
+; 1.440 ; parse_state_reg.start_transfer ; parse_state_reg.complete       ; clk          ; clk         ; 0.000        ; 0.050      ; 1.574      ;
+; 1.440 ; cur_byte_reg[1]                ; output_code_reg[1]             ; clk          ; clk         ; 0.000        ; 0.257      ; 1.781      ;
+; 1.441 ; cur_byte_reg[3]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.241      ; 1.766      ;
+; 1.452 ; cur_byte_reg[1]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.242      ; 1.778      ;
+; 1.462 ; cur_byte_reg[2]                ; parse_state_reg.other_command  ; clk          ; clk         ; 0.000        ; 0.242      ; 1.788      ;
+; 1.462 ; cur_byte_reg[7]                ; output_code_reg[0]             ; clk          ; clk         ; 0.000        ; 0.259      ; 1.805      ;
+; 1.470 ; cur_byte_reg[7]                ; parse_state_reg.start_transfer ; clk          ; clk         ; 0.000        ; 0.244      ; 1.798      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.905  ; 0.182 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.905  ; 0.182 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -46.594 ; 0.0   ; 0.0      ; 0.0     ; -26.13              ;
+;  clk             ; -46.594 ; 0.000 ; N/A      ; N/A     ; -26.130             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                     ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin            ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; clear_buffer   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; get_next_byte  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; output_code[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; output_code[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; output_code[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; output_code[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; output_valid   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; buffer_empty            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ena                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; buffer_full             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; command_complete        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[0]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[5]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[3]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[1]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[2]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[6]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[4]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data_in[7]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clear_buffer   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; get_next_byte  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.33 V              ; -0.00467 V          ; 0.226 V                              ; 0.087 V                              ; 2.91e-09 s                  ; 2.74e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.33 V             ; -0.00467 V         ; 0.226 V                             ; 0.087 V                             ; 2.91e-09 s                 ; 2.74e-09 s                 ; Yes                       ; Yes                       ;
+; output_code[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; output_code[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; output_code[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; output_code[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; output_valid   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clear_buffer   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; get_next_byte  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.33 V              ; -0.00265 V          ; 0.133 V                              ; 0.056 V                              ; 3.55e-09 s                  ; 3.31e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.33 V             ; -0.00265 V         ; 0.133 V                             ; 0.056 V                             ; 3.55e-09 s                 ; 3.31e-09 s                 ; Yes                       ; Yes                       ;
+; output_code[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; output_code[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; output_code[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; output_code[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; output_valid   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clear_buffer   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; get_next_byte  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.64 V              ; -0.0113 V           ; 0.208 V                              ; 0.179 V                              ; 2.38e-09 s                  ; 2.23e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.64 V             ; -0.0113 V          ; 0.208 V                             ; 0.179 V                             ; 2.38e-09 s                 ; 2.23e-09 s                 ; No                        ; Yes                       ;
+; output_code[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; output_code[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; output_code[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; output_code[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; output_valid   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 14418    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 14418    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 114   ; 114  ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; buffer_empty     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; buffer_full      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; command_complete ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ena              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; clear_buffer   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; get_next_byte  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; output_code[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; output_code[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; output_valid   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; buffer_empty     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; buffer_full      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; command_complete ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data_in[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ena              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; clear_buffer   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; get_next_byte  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; output_code[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; output_code[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; output_valid   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sun Dec 09 15:33:01 2018
+Info: Command: quartus_sta Command_interpreter -c Command_interpreter
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Command_interpreter.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.905
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.905             -46.594 clk 
+Info (332146): Worst-case hold slack is 0.403
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.403               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -26.130 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.324
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.324             -41.140 clk 
+Info (332146): Worst-case hold slack is 0.354
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.354               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -26.130 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.301
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.301             -14.994 clk 
+Info (332146): Worst-case hold slack is 0.182
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.182               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -22.257 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Sun Dec 09 15:33:05 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

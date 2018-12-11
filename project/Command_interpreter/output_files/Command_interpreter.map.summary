@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 09 15:32:27 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Command_interpreter
+Top-level Entity Name : Command_interpreter
+Family : Cyclone IV E
+Total logic elements : 103
+    Total combinational functions : 103
+    Dedicated logic registers : 18
+Total registers : 18
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
